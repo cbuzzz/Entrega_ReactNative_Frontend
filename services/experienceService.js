@@ -70,7 +70,9 @@ export const deleteExperience = async (experienceId) => {
 };
 
 export const searchByUsername = async (username) => {
-  const response = await axios.get(`${API_URL}/search`, {
+  const url = `${API_URL}/search`;
+  console.log('Search URL:', url, 'Params:', { username });
+  const response = await axios.get(url, {
     params: { username },
   });
   return response.data;

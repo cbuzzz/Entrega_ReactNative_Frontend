@@ -11,6 +11,7 @@ import SearchExperiences from './components/SearchExperiences';
 import iconoUsuarios from './assets/icons/user.jpg';
 import iconoHome from './assets/icons/home.jpg';
 import iconoExperiencias from './assets/icons/experiencias.jpg';
+import iconoSearch from './assets/icons/lupa.png';
 
 const Tab = createBottomTabNavigator();
 
@@ -29,6 +30,8 @@ export default function App() {
               iconSource = iconoHome;
             } else if (route.name === 'Experiencias') {
               iconSource = iconoExperiencias;
+            } else if (route.name === 'Search') {
+              iconSource = iconoSearch;
             }
 
             // Reducir el tamaño del ícono si está seleccionado o no
